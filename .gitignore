@@ -28,5 +28,7 @@ phpunit.phar
 /phpunit.xml
 # phpunit cache
 .phpunit.result.cache
+/c3.php
 
-
+#node_modules
+/node_modules

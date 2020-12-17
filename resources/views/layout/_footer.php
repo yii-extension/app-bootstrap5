@@ -1,4 +1,4 @@
-<div class = 'd-flex flex-fill align-items-center container'>
+<div class = 'd-flex flex-fill align-items-center container-fluid'>
 
     <div class = 'd-flex flex-fill float-start'>
         <i class=''></i>

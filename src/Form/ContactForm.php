@@ -31,6 +31,31 @@ final class ContactForm extends FormModel
         return 'ContactForm';
     }
 
+    public function getAttachFiles(): array
+    {
+        return $this->attachFiles;
+    }
+
+    public function getBody(): string
+    {
+        return $this->body;
+    }
+
+    public function getEmail(): string
+    {
+        return $this->email;
+    }
+
+    public function getSubject(): string
+    {
+        return $this->subject;
+    }
+
+    public function getUsername(): string
+    {
+        return $this->username;
+    }
+
     public function rules(): array
     {
         return [

@@ -30,4 +30,8 @@ $this->setTitle('404');
         Please contact us if you think this is a server error. Thank you.
     </p>
 
+    <a class ='btn btn-danger mt-5' href=<?= $url->generate('index') ?>>
+        Go Back Home
+    </a>
+
 </div>

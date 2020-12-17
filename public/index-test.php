@@ -40,6 +40,7 @@ $startTime = microtime(true);
  * Register temporary error handler to catch error while container is building.
  */
 $errorHandler = new ErrorHandler(new NullLogger(), new HtmlRenderer());
+
 /**
  * Production mode
  * $errorHandler = $errorHandler->withoutExposedDetails();

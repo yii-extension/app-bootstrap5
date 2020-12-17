@@ -31,11 +31,6 @@ final class ContactForm extends FormModel
         return 'ContactForm';
     }
 
-    public function getAttachFiles(): array
-    {
-        return $this->attachFiles;
-    }
-
     public function getBody(): string
     {
         return $this->body;

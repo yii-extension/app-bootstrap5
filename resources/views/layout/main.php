@@ -11,12 +11,15 @@ declare(strict_types=1);
 
 
 use App\Asset\AppAsset;
+use App\Asset\BootstrapIconsAsset;
 use Yii\Extension\Widget\AlertMessage;
 use Yiisoft\Html\Html;
 
 $assetManager->register([
     AppAsset::class
 ]);
+
+$aliases->set('@icons', $assetManager->getBundle(BootstrapIconsAsset::class)->baseUrl);
 
 $this->setCssFiles($assetManager->getCssFiles());
 $this->setJsFiles($assetManager->getJsFiles());

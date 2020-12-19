@@ -13,10 +13,10 @@ final class BootstrapIconsAsset extends AssetBundle
 
     public ?string $baseUrl = '@assetsUrl';
 
-    public ?string $sourcePath = '@npm/bootstrap-icons/font';
+    public ?string $sourcePath = '@npm/bootstrap-icons';
 
     public array $css = [
-        'bootstrap-icons.css',
+        'font/bootstrap-icons.css',
     ];
 
     public function __construct()
@@ -24,7 +24,11 @@ final class BootstrapIconsAsset extends AssetBundle
         $pathMatcher = new PathMatcher();
 
         $this->publishOptions = [
-            'filter' => $pathMatcher->only('bootstrap-icons.css', 'fonts/*'),
+            'filter' => $pathMatcher->only(
+                'font/bootstrap-icons.css',
+                'font/fonts/*',
+                'bootstrap-icons.svg',
+            ),
         ];
     }
 }

@@ -3,6 +3,8 @@
 declare(strict_types=1);
 
 use App\Command\HelloCommand;
+use Yiisoft\Aliases\Aliases;
+use Yiisoft\Factory\Definitions\Reference;
 
 return [
     'app' => [
@@ -94,6 +96,9 @@ return [
 
     'yiisoft/view' => [
         'basePath' => '@views',
+        'defaultParameters' => [
+            'aliases' => Reference::to(Aliases::class),
+        ],
     ],
 
     'yiisoft/yii-console' => [

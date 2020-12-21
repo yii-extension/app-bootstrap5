@@ -2,9 +2,15 @@
 
 declare(strict_types=1);
 
-use App\Command\HelloCommand;
+use App\Command\Hello;
+use App\Service\Parameter;
 use Yiisoft\Aliases\Aliases;
+use Yiisoft\Arrays\Modifier\ReverseBlockMerge;
+use Yiisoft\Assets\AssetManager;
 use Yiisoft\Factory\Definitions\Reference;
+use Yiisoft\Form\Widget\Field;
+use Yiisoft\Router\UrlGeneratorInterface;
+use Yiisoft\Router\UrlMatcherInterface;
 
 return [
     'app' => [
@@ -45,8 +51,7 @@ return [
             'config' => [
                 'brandLabel()' => ['My Project'],
                 'brandImage()' => ['/images/yii-logo.jpg'],
-                'options()' => [['class' => 'navbar navbar-dark navbar-expand-lg bg-dark']]
-            ],
+                'options()' => [['class' => 'navbar navbar-dark navbar-expand-lg bg-dark']]                    ],
         ],
 
         'name' => 'My Project'
@@ -59,6 +64,19 @@ return [
             'encryption' => null,
             'username' => 'admin@example.com',
             'password' => ''
+        ]
+    ],
+
+    'yii-extension/view-services' => [
+        'defaultParameters' => [
+            'app' => Reference::to(Parameter::class),
+            'aliases' => Reference::to(Aliases::class),
+            'assetManager' => Reference::to(AssetManager::class),
+            'url' => Reference::to(UrlGeneratorInterface::class),
+            'urlMatcher' => Reference::to(UrlMatcherInterface::class),
+        ],
+        'viewParameters' => [
+            'field' => Reference::to(Field::class),
         ]
     ],
 
@@ -96,14 +114,13 @@ return [
 
     'yiisoft/view' => [
         'basePath' => '@views',
-        'defaultParameters' => [
-            'aliases' => Reference::to(Aliases::class),
-        ],
     ],
 
     'yiisoft/yii-console' => [
         'commands' => [
-            'hello' => HelloCommand::class,
+            'hello' => Hello::class,
         ]
     ],
+
+    ReverseBlockMerge::class => new ReverseBlockMerge(),
 ];

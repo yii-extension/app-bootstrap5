@@ -4,3 +4,7 @@
     padding: 15px;
     margin: auto;
 }
+
+.navbar-dark .navbar-nav .nav-link {
+    color: hsl(217, 71%, 53%);
+}

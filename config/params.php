@@ -96,6 +96,13 @@ return [
         ],
     ],
 
+    'yiisoft/form' => [
+        'fieldConfig' => [
+            'errorOptions()' => [['class' => 'text-left text-danger mt-0']],
+            'labelOptions()' => [['label' => '']],
+        ]
+    ],
+
     'yiisoft/log-target-file' => [
         'fileTarget' => [
             'file' => '@runtime/logs/app.txt'

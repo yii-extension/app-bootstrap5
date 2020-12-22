@@ -13,12 +13,6 @@ use Yiisoft\Form\Widget\Field;
 use Yiisoft\Form\Widget\Form;
 use Yiisoft\Html\Html;
 
-$fieldConfig = [
-    'inputCssClass()' => ['form-control'],
-    'labelOptions()' => [['class' => 'required', 'label' => '']],
-    'errorOptions()' => [['class' => 'text-left text-danger']],
-];
-
 $this->setTitle('contact');
 
 ?>
@@ -40,16 +34,16 @@ $this->setTitle('contact');
         )
         ->begin() ?>
 
-        <?= Field::Widget($fieldConfig)->config($form, 'username') ?>
+        <?= $field->config($form, 'username') ?>
 
-        <?= Field::Widget($fieldConfig)->config($form, 'email') ?>
+        <?= $field->config($form, 'email') ?>
 
-        <?= Field::Widget($fieldConfig)->config($form, 'subject') ?>
+        <?= $field->config($form, 'subject') ?>
 
-        <?= Field::Widget($fieldConfig)->config($form, 'body')
+        <?= $field->config($form, 'body')
             ->textArea(['class' => 'form-control textarea', 'rows' => 2]) ?>
 
-        <?= Field::Widget($fieldConfig)->config($form, 'attachFiles')
+        <?= $field->config($form, 'attachFiles')
             ->fileInput(
                 ['id' => 'formFileMultiple', 'type' => 'file', 'multiple' => true, 'name' => 'attachFiles[]'],
                 true,

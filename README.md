@@ -8,8 +8,7 @@
 
 [![Total Downloads](https://img.shields.io/packagist/dt/yii-extension/app-bootstrap5)](https://packagist.org/packages/yii-extension/app-bootstrap5)
 [![build](https://github.com/yii-extension/app-bootstrap5/workflows/build/badge.svg)](https://github.com/yii-extension/app-bootstrap5/actions)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/yii-extension/app-bootstrap5/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/yii-extension/app-bootstrap5/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/yii-extension/app-bootstrap5/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/yii-extension/app-bootstrap5/?branch=master)
+[![codecov](https://codecov.io/gh/yii-extension/app-bootstrap5/branch/master/graph/badge.svg?token=NTJUL6C6EL)](https://codecov.io/gh/yii-extension/app-bootstrap5)
 [![static analysis](https://github.com/yii-extension/app-bootstrap5/workflows/static%20analysis/badge.svg)](https://github.com/yii-extension/app-bootstrap5/actions?query=workflow%3A%22static+analysis%22)
 [![type-coverage](https://shepherd.dev/github/yii-extension/app-bootstrap5/coverage.svg)](https://shepherd.dev/github/yii-extension/app-bootstrap5)
 

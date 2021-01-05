@@ -6,15 +6,14 @@ namespace App\Tests\Acceptance;
 
 use App\Tests\AcceptanceTester;
 
-final class PageIndexCest
+final class IndexCest
 {
-    public function indexPage(AcceptanceTester $I): void
+    public function testIndexPage(AcceptanceTester $I): void
     {
         $I->amGoingTo('go to the index page');
         $I->amOnPage('/');
 
-        $I->wantTo('see page index.');
+        $I->expectTo('see page index.');
         $I->see('Hello!');
-        $I->see("Let's start something great with Yii3!");
     }
 }

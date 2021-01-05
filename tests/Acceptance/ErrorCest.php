@@ -6,9 +6,9 @@ namespace App\Tests\Acceptance;
 
 use App\Tests\AcceptanceTester;
 
-final class PageErrorCest
+final class ErrorCest
 {
-    public function errorPage(AcceptanceTester $I): void
+    public function testErrorPage(AcceptanceTester $I): void
     {
         $I->amGoingTo('go to the error page');
         $I->amOnPage('/about');
@@ -18,5 +18,7 @@ final class PageErrorCest
         $I->see('The page /about was not found.');
         $I->see('The above error occurred while the Web server was processing your request.');
         $I->see('Please contact us if you think this is a server error. Thank you.');
+
+        $I->click('Go Back Home');
     }
 }

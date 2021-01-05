@@ -12,16 +12,21 @@ use Yiisoft\Yii\Bootstrap5\Nav;
 use Yiisoft\Yii\Bootstrap5\NavBar;
 use Yiisoft\Html\Html;
 
-$menuItems =  $app->get('nav.guest');
+$config = [
+    'brandLabel()' => ['My Project'],
+    'options()' => [['class' => 'navbar navbar-dark navbar-expand-lg bg-dark']],
+];
+
 $currentUrl = '';
+$menuItems = [];
 
 if ($urlMatcher->getCurrentRoute() !== null) {
-    $currentUrl = $url->generate($urlMatcher->getCurrentRoute()->getName());
+    $currentUrl = $urlMatcher->getCurrentUri()->getPath();
 }
 
 ?>
 
-<?= NavBar::widget($app->get('navBar.config'))->begin() ?>
+<?= NavBar::widget($config)->begin() ?>
 
     <?= Nav::widget()
         ->currentPath($currentUrl)

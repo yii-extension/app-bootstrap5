@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use Psr\Container\ContainerInterface;
 use Psr\Log\LoggerInterface;
 use Psr\Log\NullLogger;
@@ -56,7 +58,7 @@ $errorHandler->register();
 
 $container = new Container(
     require Builder::path('web'),
-    require Builder::path('providers'),
+    require Builder::path('providers')
 );
 
 /**

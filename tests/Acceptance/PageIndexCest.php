@@ -8,14 +8,13 @@ use App\Tests\AcceptanceTester;
 
 final class PageIndexCest
 {
-    public function _before(AcceptanceTester $I): void
-    {
-        $I->amOnPage('/');
-    }
-
     public function indexPage(AcceptanceTester $I): void
     {
+        $I->amGoingTo('go to the index page');
+        $I->amOnPage('/');
+
         $I->wantTo('see page index.');
-        $I->see('Hello World');
+        $I->see('Hello!');
+        $I->see("Let's start something great with Yii3!");
     }
 }

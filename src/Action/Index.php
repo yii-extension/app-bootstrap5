@@ -5,12 +5,12 @@ declare(strict_types=1);
 namespace App\Action;
 
 use Psr\Http\Message\ResponseInterface;
-use Yii\Extension\Service\ServiceView;
+use Yiisoft\Yii\View\ViewRenderer;
 
 final class Index
 {
-    public function run(ServiceView $serviceView): ResponseInterface
+    public function run(ViewRenderer $viewRenderer): ResponseInterface
     {
-        return $serviceView->render('site/index');
+        return $viewRenderer->render('site/index');
     }
 }
